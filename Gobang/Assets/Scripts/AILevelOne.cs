@@ -4,10 +4,10 @@ using System.Collections.Generic;
 
 public class AILevelOne : Player
 {
-    Dictionary<string, float> toScore = new Dictionary<string, float>();
-    float[,] scor = new float[15, 15];
+    protected Dictionary<string, float> toScore = new Dictionary<string, float>();
+    protected float[,] scor = new float[15, 15];
 
-    void Start()
+   public virtual void Start()
     {
         //添加打分规则
         toScore.Add("_aa_", 100);
@@ -64,7 +64,7 @@ public class AILevelOne : Player
 
     }
 
-    public void CheckOneLine(int[] pos, int[] offset, int chess)
+    public virtual void CheckOneLine(int[] pos, int[] offset, int chess)
     {
         string str = "a";
         //右边
